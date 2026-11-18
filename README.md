@@ -104,7 +104,7 @@ plugin that generates the tint ramps.
 ---
 
 ## 🖥️ Home lab — my own server
-A spare HP laptop turned into a headless **Debian 13** server that hosts production.
+A spare laptop turned into a headless **Debian 13** server that hosts production (started on an HP i3; moved to a faster i7 laptop with 16 GB in Nov 2026, same addresses).
 
 - I benchmarked it before moving: **~2.7× single-thread and ~7× throughput** over the VM it
   replaced.
@@ -112,6 +112,7 @@ A spare HP laptop turned into a headless **Debian 13** server that hosts product
   power-on-after-outage.
 - Cloudflare Tunnels for the public apps, plus my own **Headscale** control server (Caddy + Let's
   Encrypt, its own DERP relay, an on-demand exit node) and a one-click Windows "Home VPN" toggle.
+- Hardened in Nov 2026: a read-only Docker proxy instead of handing containers the Docker socket, Uptime Kuma reachable only over the tailnet, image-update alerts, services bound to localhost.
 - Pi-hole, Uptime Kuma with Discord alerts, Home Assistant, a Minecraft Paper server with its own
   control panel, and Sunshine/Moonlight game streaming locked to the tailnet.
 - **Home network:** found the line was GPON fibre (875/320 Mbps wired) behind a double NAT, and
